@@ -1,0 +1,8 @@
+#articles {
+  width: 200px;
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
