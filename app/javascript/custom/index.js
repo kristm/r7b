@@ -1,3 +1,4 @@
 import Home from "custom/home"
+import Preloader from "custom/preloader"
 
-export default Home;
+export { Home, Preloader }
