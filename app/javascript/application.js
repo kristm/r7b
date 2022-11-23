@@ -3,5 +3,5 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import { Home, Preloader } from "custom"
 
-new Home()
-new Preloader()
+//new Home()
+//new Preloader()

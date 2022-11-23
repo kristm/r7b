@@ -3,15 +3,8 @@
 <h1>Articles</h1>
 
 <div id="articles">
-  <div>
-    <strong>Title</strong>
-    <strong>Author</strong>
-  </div>
-  <% @articles.each do |article| %>
-    <%= link_to article do %>
-      <%= render article %>
-    <% end %> 
-  <% end %>
+  <%= render 'sidebar', articles: @articles %>
+  <%= render @articles.first %>
 </div>
 
 <strong><%= link_to "New article", new_article_path %></strong>

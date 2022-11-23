@@ -1,9 +1,11 @@
-<div id="<%= dom_id article %>">
-  <p>
-    <%= article.title %>
-  </p>
+<%= turbo_frame_tag 'first_turbo' do %>
+  <div id="<%= dom_id article %>">
+    <p>
+      <%= article.title %>
+    </p>
 
-  <p>
-    <%= article.author %>
-  </p>
-</div>
+    <p>
+      <%= article.author %>
+    </p>
+  </div>
+<% end %>

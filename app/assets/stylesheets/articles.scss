@@ -1,8 +1,14 @@
 #articles {
-  width: 200px;
-  div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+
+  aside {
+    width: 200px;
+  }
+
+  turbo-frame {
+    border: 1px solid black;
+    flex: 1 0 50%;
   }
 }
