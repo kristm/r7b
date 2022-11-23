@@ -4,4 +4,4 @@ import "controllers"
 import { Home, Preloader } from "custom"
 
 //new Home()
-//new Preloader()
+new Preloader()
