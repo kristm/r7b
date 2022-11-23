@@ -4,7 +4,7 @@
 
 <div id="articles">
   <%= render 'sidebar', articles: @articles %>
-  <%= render @articles.first %>
+  <%= render 'loader', article: @articles.first %>
 </div>
 
 <strong><%= link_to "New article", new_article_path %></strong>

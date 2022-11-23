@@ -1,6 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @article %>
+<%= turbo_frame_tag 'show_article' do %>
+  <%= render @article %>
+<% end %>
 
 <div>
   <%= link_to "Edit this article", edit_article_path(@article) %> |
