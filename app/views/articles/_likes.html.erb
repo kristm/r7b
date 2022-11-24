@@ -1,0 +1,10 @@
+<script>
+  function upvote() {
+    console.log('upvote')
+    element = document.querySelector('#likes')
+    likes = parseInt(element.innerText) + 1
+    element.innerText = likes
+    
+  }
+</script>
+<span id='likes'><%= article.likes %></span><%= link_to "Upvote article", upvote_article_path(article), data: {"turbo-method": :put}, onclick: 'upvote()', remote: true  %> |

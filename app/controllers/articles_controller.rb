@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: %i[ show edit update destroy ]
+  before_action :set_article, only: %i[ show edit update destroy upvote]
 
   # GET /articles or /articles.json
   def index
@@ -32,6 +32,12 @@ class ArticlesController < ApplicationController
         format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def upvote
+    likes = @article.likes + 1
+    @article.update(likes: likes) 
+    render json: { success: true }
   end
 
   # PATCH/PUT /articles/1 or /articles/1.json
