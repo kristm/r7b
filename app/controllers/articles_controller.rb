@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
   def upvote
     likes = @article.likes + 1
     @article.update(likes: likes) 
-    render json: { success: true }
+    render partial: 'likes', locals: { article: @article}, status: :ok
   end
 
   # PATCH/PUT /articles/1 or /articles/1.json
