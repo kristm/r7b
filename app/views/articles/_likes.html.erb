@@ -1,3 +1,3 @@
 <%= turbo_frame_tag 'likes_frame' do %>
-  <span id='likes'><%= article.likes %></span><%= link_to "Upvote article", upvote_article_path(article), data: {"turbo-method": :put}, remote: true  %> |
+  <span id='likes'><%= article.likes %></span><%= link_to "Upvote article", upvote_article_path(article), data: {"turbo-method": :put}  %> |
 <% end %>
