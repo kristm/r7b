@@ -12,3 +12,9 @@
     flex: 1 0 50%;
   }
 }
+dl {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 150px;
+}
