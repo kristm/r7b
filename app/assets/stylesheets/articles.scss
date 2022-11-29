@@ -16,5 +16,14 @@ dl {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 150px;
+  width: 80vw;
+
+  dt {
+    flex: 0 1 100px;
+  }
+  dd {
+    flex: 1 0 50%;
+  }
 }
+
+

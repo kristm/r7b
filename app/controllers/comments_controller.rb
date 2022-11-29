@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
   def create
     @comment = @article.comments.new(comment_params)
     if @comment.save
-      redirect_to articles_path
+      redirect_to article_path(@article)
     else
       render :new
     end
