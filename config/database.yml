@@ -17,3 +17,7 @@ test:
 production:
   <<: *default
   database: r7b_production
+  host: <%= ENV.fetch("PGHOST") { 'dpg-ce9aboo2i3ms217m0e90-a' } %>
+  username: <%= ENV.fetch('PGUSER') { 'test' } %>
+  password: <%= ENV.fetch('PGPASSWORD') { 'BUExTMsDpiATu0LjmKImBxPX8uts7aTZ' } %>
+  port: 5432
