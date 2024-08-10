@@ -6,7 +6,26 @@
   placeholder = document.querySelector("#img");
   img = document.querySelector("#targetImg");
   imgSrc = img.getAttribute("src");
-  newImg = document.createElement("img");
-  newImg.src = imgSrc;
-  placeholder.appendChild(newImg);
+
+  const getBase64StringFromDataURL = (dataURL) =>
+    dataURL.replace('data:', '').replace(/^.+,/, '');
+
+  fetch(imgSrc)
+    .then((res) => res.blob())
+    .then((blob) => {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        console.log(reader.result);
+        const base64 = getBase64StringFromDataURL(reader.result);
+        console.log(base64);
+
+        const newImg = new Image();
+        newImg.src = reader.result;
+        console.log(newImg);
+        placeholder.appendChild(newImg);
+      };
+      reader.readAsDataURL(blob);
+
+    });
+
 </script>
